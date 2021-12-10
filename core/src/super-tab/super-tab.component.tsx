@@ -6,6 +6,7 @@ import { Component, ComponentInterface, Element, h, Host, Method, Prop } from '@
   styleUrl: 'super-tab.component.scss',
   shadow: true,
   scoped: false,
+  test: true,
 })
 export class SuperTabComponent implements ComponentInterface {
   @Element() el!: HTMLSuperTabElement;
