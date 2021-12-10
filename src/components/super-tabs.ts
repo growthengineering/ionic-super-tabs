@@ -98,12 +98,12 @@ export interface SuperTabsConfig {
 })
 export class SuperTabsComponent
   implements
-    OnInit,
-    AfterContentInit,
-    AfterViewInit,
-    OnDestroy,
-    RootNode,
-    NavigationContainer {
+  OnInit,
+  AfterContentInit,
+  AfterViewInit,
+  OnDestroy,
+  RootNode,
+  NavigationContainer {
   /**
    * Color of the toolbar behind the tab buttons
    */
@@ -186,11 +186,11 @@ export class SuperTabsComponent
    * @param val
    */
   @Input()
-  set scrollViews (val: boolean) {
+  set scrollViews(val: boolean) {
     this._scrollViews = typeof val !== 'boolean' || val === true;
   }
 
-  get scrollViews () {
+  get scrollViews() {
     return this._scrollViews;
   }
 
@@ -367,7 +367,7 @@ export class SuperTabsComponent
       );
     }
 
-    if(this.passthroughLifecycle && this.viewCtrl) {
+    if (this.passthroughLifecycle && this.viewCtrl) {
       this.viewCtrl.willEnter.subscribe(() => {
         this.fireLifecycleEvent(['willEnter']);
       });
@@ -506,7 +506,7 @@ export class SuperTabsComponent
     if (this.selectedTabIndex < 0) {
       this.selectedTabIndex = 0;
     }
-    
+
     return [this._tabs[this.selectedTabIndex]];
   }
 
@@ -666,7 +666,7 @@ export class SuperTabsComponent
             activeView._didLeave();
             break;
         }
-      });  
+      });
     }
   }
 
@@ -842,13 +842,13 @@ export class SuperTabsComponent
   }
 
   // needed since we're implementing RootNode
-  paneChanged() {}
+  paneChanged() { }
 
   // needed to make Ionic Framework think this is a tabs component... needed for Deeplinking
-  getSelected() {}
+  getSelected() { }
 
   // needed to make Ionic Framework think this is a tabs component... needed for Deeplinking
-  setTabbarPosition() {}
+  setTabbarPosition() { }
 
   // update segment button widths manually
   indexSegmentButtonWidths() {
